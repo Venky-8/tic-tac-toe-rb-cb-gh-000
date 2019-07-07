@@ -103,10 +103,8 @@ def winner(board)
 end
 
 def play(board)
-  i=0
-  while i<9 and winner(board) == nil do
+  while !over?(board)
     turn(board)
-    i+=1
   end
   if winner(board) != nil
     puts "Congratulations #{winner(board)}!"
